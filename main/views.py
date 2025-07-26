@@ -33,9 +33,9 @@ def announcements(request):
 def blog(request):
     return render(request, 'main/blog.html')
 
-def calendar(request):
+def academic_calendar(request):
     return render(request, 'main/academic_calendar.html')
 
-def launch(request):
+def music_album_launch(request):
     return render(request, 'main/music_album_launch.html')
 
