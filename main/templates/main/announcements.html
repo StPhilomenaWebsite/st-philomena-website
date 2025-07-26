@@ -4,14 +4,11 @@
 {% block content %}
     <h2>Announcements</h2>
     <p>
-        <strong>Providence Secondary School</strong> in conjunction with <strong>Chisitu Parish</strong> is inviting you to the Music Album Launch.
-        For more information, watch the video below:
+        <strong>Below are all ancouncements for Providence Girls Secondary School.</strong> They are arranged in <strong>chronological order</strong>
     </p>
 
     <div style="margin-top: 20px;">
-        <video width="640" height="360" controls>
-            <source src="{% static 'videos/providence_album_launch.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <a href="{% url 'music_album_launch' %}">Music Album Launch Announcement</a>
+         <a href="{% url 'academic_calendar' %}">2025-2026 Academic Calendar</a>
     </div>
 {% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+
+<!-- progress_report.html -->
+
+<div class="progress-report">
+    <h2>Progress Report</h2>
+    <p>
+        <strong>Serial Number:</strong> {{ serial_number }}<br>
+        <strong>Name:</strong> {{ name }}<br>
+        <strong>Class:</strong> {{ class }}<br>
+        <strong>Academic Year:</strong> {{ academic_year }}<br>
+        <strong>Term:</strong> {{ term }}
+    </p>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Marks Obtained</th>
+                <th>Letter Grade</th>
+                <th>Position</th>
+                <th>Candidature</th>
+                <th>Out of</th>
+                <th>Teacher's Remark</th>
+                <th>Teacher's Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subject, position, candidature, remark, teacher in zip(subjects, subject_positions, candidatures, subject_remarks, teacher_names) %}
+                <tr>
+                    <td>{{ subject.name }}</td>
+                    <td>{{ subject.score }}</td>
+                    <td>{{ subject.grade }}</td>
+                    <td>{{ position }}</td>
+                    <td>{{ candidature }}</td>
+                    <td>{{ out_of }}</td>
+                    <td>{{ remark }}</td>
+                    <td>{{ teacher }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>
+        <strong>Summary:</strong><br>
+        <strong>Total Marks Obtained:</strong> {{ total_marks }}<br>
+        <strong>Average Grade:</strong> {{ average_grade }}<br>
+        <strong>Overall Grade:</strong> {{ overall_grade }}<br>
+        <strong>Pass/Fail Comment:</strong> {{ pass_fail_comment }}<br>
+        <strong>Position in Class:</strong> {{ position_in_class }}<br>
+        <strong>Out of:</strong> {{ out_of }}
+    </p>
+</div>
+
+
+{% block content %}
+    <h2>Welcome to Providence Girls Secondary School About Us Section</h2>
+    <p>We are committed to academic excellence and holistic student development.</p>
+{% endblock %}
