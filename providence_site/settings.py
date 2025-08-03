@@ -89,8 +89,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ✅ Optional Heroku/Render config
-import django_heroku
-django_heroku.settings(locals())
 
 # Proxy SSL header for platforms like Heroku/Render
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
