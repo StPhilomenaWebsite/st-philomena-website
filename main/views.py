@@ -39,3 +39,7 @@ def academic_calendar(request):
 def music_album_launch(request):
     return render(request, 'main/music_album_launch.html')
 
+def form1_selection(request):
+    return render(request, "form1_selection.html")
+
+
