@@ -1,8 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template.loader import render_to_string
-from weasyprint import HTML
-import tempfile
 
 # Create your views here.
 # Each function renders a page
