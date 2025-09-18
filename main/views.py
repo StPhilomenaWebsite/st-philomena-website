@@ -46,25 +46,6 @@ def music_album_launch(request):
 def form1_selection(request):
     return render(request, 'main/form1_selection.html')
 
-def download_form1_pdf(request):
-    if request.method == 'POST':
-        password = request.POST.get('password')
-        if password != 'proviess':
-            return HttpResponse("Incorrect password! You cannot download the PDF.", status=403)
 
-        # Render HTML with all student data
-        html_string = render_to_string('main/form1_selection.html', {})  # create a separate template for PDF if needed
-
-        # Create a PDF
-        html = HTML(string=html_string)
-        result = html.write_pdf()
-
-        # Create HTTP response
-        response = HttpResponse(content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="Form1_Selection.pdf"'
-        response.write(result)
-        return response
-
-    return HttpResponse("Invalid request method.", status=400)
 
 

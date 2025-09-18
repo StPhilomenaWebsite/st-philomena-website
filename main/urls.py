@@ -13,7 +13,6 @@ urlpatterns = [
     path('music_album_launch/', views.music_album_launch, name='music_album_launch'),
     path('academic_calendar/', views.academic_calendar, name='academic_calendar'),
     path('form1-selection/', views.form1_selection, name='form1_selection'),
-     path('download-form1-pdf/', views.download_form1_pdf, name='download_form1_pdf'),
 
 
 
