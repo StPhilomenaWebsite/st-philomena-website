@@ -4,12 +4,36 @@
 <h2 style="text-align:center;">2025/2026 Form 1 Selection</h2>
 <p style="text-align:center;">Below is the official selection list for the 2025/2026 academic year.</p>
 
-<table style="width:100%; border-collapse: collapse; border:2px solid black; margin-bottom: 20px;">
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+}
+
+td.center {
+    text-align: center;
+}
+</style>
+
+<table>
     <thead>
         <tr>
-            <th style="border:2px solid black; padding:8px;">No</th>
-            <th style="border:2px solid black; padding:8px;">Name</th>
-            <th style="border:2px solid black; padding:8px;">Sponsor</th>
+            <th>No</th>
+            <th>Name</th>
+            <th>Sponsor</th>
         </tr>
     </thead>
     <tbody>
@@ -44,6 +68,8 @@
       <tr><td class="center">28</td><td>Milinje Judith Sidreck</td><td class="center">Govt</td></tr>
       <tr><td class="center">29</td><td>Mwafulirwa Shalom</td><td class="center">Govt</td></tr>
       <tr><td class="center">30</td><td>Mwale Maria</td><td class="center">Govt</td></tr>
+      
+
       <tr><td class="center">31</td><td>Msendema Grace Tupali</td><td class="center">ECM</td></tr>
       <tr><td class="center">32</td><td>Mwandama Mary</td><td class="center">Govt</td></tr>
       <tr><td class="center">33</td><td>Mpwatika Victoria</td><td class="center">ECM</td></tr>
@@ -139,27 +165,18 @@
       <tr><td class="center">121</td><td>Nyirongo Khumbo</td><td class="center">Govt</td></tr>
       <tr><td class="center">122</td><td>Sr Enita Masigeni</td><td class="center">Asp</td></tr>
       <tr><td class="center">123</td><td>Sichimata Queen</td><td class="center">Govt</td></tr>
+
+
+      <!-- ... continue all 124 students here with same <td class="center"> format ... -->
       <tr><td class="center">124</td><td>Yesani Ellen</td><td class="center">Govt</td></tr>
-     </tbody>
+    </tbody>
 </table>
 
 <div style="text-align:center; margin-top:20px;">
-    <button onclick="downloadPDF()">Download PDF (Password Protected)</button>
+    <form method="POST" action="{% url 'download_form1_pdf' %}">
+        {% csrf_token %}
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit">Download PDF (Password Protected)</button>
+    </form>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-function downloadPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF('p', 'pt', 'a4');
-    const table = document.querySelector('table');
-    doc.html(table, {
-        callback: function(doc) {
-            doc.save('Form1_Selection.pdf', {password: 'proviess'});
-        },
-        x: 20,
-        y: 20
-    });
-}
-</script>
 {% endblock %}
