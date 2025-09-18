@@ -40,6 +40,6 @@ def music_album_launch(request):
     return render(request, 'main/music_album_launch.html')
 
 def form1_selection(request):
-    return render(request, "form1_selection.html")
+    return render(request, 'main/form1_selection.html')
 
 
