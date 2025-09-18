@@ -53,7 +53,7 @@ def download_form1_pdf(request):
             return HttpResponse("Incorrect password! You cannot download the PDF.", status=403)
 
         # Render HTML with all student data
-        html_string = render_to_string('main/form1_selection_pdf.html', {})  # create a separate template for PDF if needed
+        html_string = render_to_string('main/form1_selection.html', {})  # create a separate template for PDF if needed
 
         # Create a PDF
         html = HTML(string=html_string)
