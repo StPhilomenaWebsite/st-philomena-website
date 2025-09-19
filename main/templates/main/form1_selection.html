@@ -164,18 +164,8 @@ td.center {
       <tr><td class="center">121</td><td>Nyirongo Khumbo</td><td class="center">Govt</td></tr>
       <tr><td class="center">122</td><td>Sr Enita Masigeni</td><td class="center">Asp</td></tr>
       <tr><td class="center">123</td><td>Sichimata Queen</td><td class="center">Govt</td></tr>
-
-
       <!-- ... continue all 124 students here with same <td class="center"> format ... -->
       <tr><td class="center">124</td><td>Yesani Ellen</td><td class="center">Govt</td></tr>
     </tbody>
 </table>
-
-<div style="text-align:center; margin-top:20px;">
-    <form method="POST" action="{% url 'download_form1_pdf' %}">
-        {% csrf_token %}
-        <input type="password" name="password" placeholder="Enter password" required>
-        <button type="submit">Download PDF (Password Protected)</button>
-    </form>
-</div>
 {% endblock %}
