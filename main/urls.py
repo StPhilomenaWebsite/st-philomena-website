@@ -13,6 +13,8 @@ urlpatterns = [
     path('music_album_launch/', views.music_album_launch, name='music_album_launch'),
     path('academic_calendar/', views.academic_calendar, name='academic_calendar'),
     path('form1-selection/', views.form1_selection, name='form1_selection'),
+    path('events/term3/', views.term3_events, name='events_2024-2025_term_3'),
+    path('events/term1/', views.term1_events, name='events_2025-2026_term_1'),
 
 
 
