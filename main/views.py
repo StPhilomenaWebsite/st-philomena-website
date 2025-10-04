@@ -46,7 +46,7 @@ def term3_events(request):
     return render(request, 'main/events_2024-2025_term_3.html')
 
 def term1_events(request):
-    return render(request, 'main/events_2025-2026_term_1')
+    return render(request, 'main/events_2025-2026_term_1.html')
 
 
 
