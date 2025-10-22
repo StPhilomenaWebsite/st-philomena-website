@@ -48,8 +48,8 @@ def term3_events(request):
 def term1_events(request):
     return render(request, 'main/events_2025-2026_term_1.html')
 
-def msonkhano_makolo(request):
-    return render(request, 'main/msonkhano_makolo_2025.html')
+def nsonkhano_makolo_2025(request):
+    return render(request, 'main/nsonkhano_makolo_2025.html')
 
 
 
