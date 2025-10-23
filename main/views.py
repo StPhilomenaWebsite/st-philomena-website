@@ -51,6 +51,13 @@ def term1_events(request):
 def nsonkhano_makolo_2025(request):
     return render(request, 'main/nsonkhano_makolo_2025.html')
 
+def mankhwala_katemera_2025(request):
+    return render(request, 'main/mankhwala_katemera_2025.html')
+
+def drug_vaccine_2025(request):
+    return render(request, 'main/drug_vaccine_2025.html')
+
+
 
 
 
