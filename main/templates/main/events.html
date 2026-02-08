@@ -1,22 +1,10 @@
+{% load static %}
 {% extends 'main/base.html' %}
 
 {% block content %}
-  <h2>Calendars of Events</h2>
+  <h2>Calendar of Events</h2>
 
-  <p>Select the academic term below to view its detailed events:</p>
-
-  <ul>
-    <li>
-      <a href="{% url 'events_2024-2025_term_3' %}">
-        Term Three Calendar of Events (2024–2025 Academic Year)
-      </a>
-    </li>
-    <li>
-      <a href="{% url 'events_2025-2026_term_1' %}">
-        Term One Calendar of Events (2025–2026 Academic Year)
-      </a>
-    </li>
-  </ul>
-
-  <p>If you have questions, comments or observations, please call <strong>0995787592</strong>.</p>
+  <a href="{% static 'pdfs/calendar_of_events.pdf' %}" target="_blank">
+      View Calendar of Events (PDF)
+  </a>
 {% endblock %}
