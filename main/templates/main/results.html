@@ -1,43 +1,21 @@
 {% extends 'main/base.html' %}
 
+{% load static %}
+
 {% block content %}
-    <h2>Welcome to St Philomena Girls Catholic Secondary School Results Section</h2>
+    <h2>Welcome to St Philomena Girls Catholic Secondary School Results and Awards Section</h2>
     <p>This is where you can access the results for all classes.</p>
 
-     <h2>2024-2025 TERM TWO RESULTS RELEASED IN APRIL, 2025</h2>
     <ul style="list-style: none; padding: 0;">
         <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbywXnAWi7d7ZZ-ZeJfI3SvlnbZPJFzbi23JBOiGbYHXw01IXcvyLkgq5r_4h4s-md4sRQ/exec">Form Three 2024-2025 Term 2</a>
-        </li>
-        <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbw7qUxyak8WN-hu72Ux5UXMXWCi8sZNITifjmEaWWDLVB9g76l8A69he6ayP744VjxF/exec">Form One 2024-2025 Term 2</a>
-        </li>
-        <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbz_qt9QqBrPQhQmkd3ex-Wc-qk4OLwuyODuprJ-LxQdTSRvd2e6CFwO7i01E978s5z9_g/exec">2025 SHED MSCE Mock Results</a>
-        </li>
-        <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbzlRfARVzhfMxjPxfM-3-ZA_2Wh1I8aPifZ5HSPDYJNVtnUlK-Krpde9vuFfvjJMYeKcw/exec">2025 Mulanje District JCE Mock Results</a>
-        </li>
 
-        <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbxGZgG3kCCFRkoLBE8BX5zQI1w0xR6xZf-S7iOePnvYIbqtr3xyYBOhfF6-He3-WjvV/exec">2025 JCE MOCK Results (Pass List)</a>
-        </li>
+
+   <a href="{% static 'pdfs/pta_school_awards.pdf' %}" target="_blank">
+      PTA SCHOOL AWARDS (PDF)
+  </a>
 
     </ul>
 
-    <h2>2024-2025 TERM THREE RESULTS:</h2>
-
-    <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbxAALNWyYwNG2VOxZN28xVYP2mtmreqnx9Wq_iPqbIFoDnN3nO3wKcnJTG39bXw2F5n/exec">2024-2025 Form 1 Term 3 Exam Results</a>
-        </li>
-
-
-    <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycby7fa2IqVCWG1evOlfnI1EN2YPkYKkEU3tOIWeHL26yx3MWaRpqEWqhZY_LkEJ215EI/exec">2024-2025 Form 3 Term 3 Exam Results</a>
-        </li>
-
-    <li style="margin-bottom: 10px;">
-            <a href="https://script.google.com/macros/s/AKfycbxWIOLmp7fEVq2AeTujWOue1JVVhcfUVOxu1NnUX_N_ckTnHy2Y18V2-OFbmV0VVsJy6A/exec">2025 Blantyre ArchDiocese Mock Results</a>
-        </li>
+    
 {% endblock %}
 
